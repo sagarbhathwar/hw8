@@ -1,0 +1,30 @@
+physics:
+  _include: "components/physics.yml"
+render:
+  _include: "components/default_rendering.yml"
+layout:
+  surface_materials:
+    - name: "object_material"
+      static_friction: 0.1
+      dynamic_friction: 0.1
+      restitution: 0
+  articulations:
+    - name: "cabinet"
+      fix_base: true
+      position: [0,0,0]
+      rotation: [1,0,0,0]
+      surface_material: "object_material"
+      _variants:
+        type: "options"
+        global_id: "partnet_mobility_id"
+        options:
+          _include: "cabinet_models.yml"
+agent:
+  _include: "robots/floating_panda.yml"
+  _override:
+    base_position: [0, 0, 0]
+    base_rotation: [1, 0, 0, 0]
+    # initial_qpos: Uniform([0, 0, 0, -1.5707963267948966, -1.5707963267948966, 0, 0.04, 0.04], [0, 0, 0, 1.5707963267948966, -1.5707963267948966, 0, 0.04, 0.04])
+
+custom:
+  open_extent: 0.9

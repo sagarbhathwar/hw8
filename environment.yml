@@ -1,0 +1,31 @@
+name: sapien-rl
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - pip
+  - future
+  - h5py
+  - matplotlib
+  - numpy
+  - pathlib2
+  - pylint
+  - pytest
+  - pytorch=1.4.0
+  - pyyaml
+  - tqdm
+  - yaml
+  - transforms3d
+  - scipy
+  - yacs
+  - requests
+  - shapely
+  - tabulate
+  - pip:
+    - glfw
+    - opencv-python
+    - gym
+    - transform3d
+    - trimesh
+    - open3d
